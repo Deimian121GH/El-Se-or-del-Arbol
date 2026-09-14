@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Permite caracteres como ñ y tildes -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página se adapte a celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña -->
+    <title>Pantallas Señor del Árbol</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="encabezado">
+    <div class="contenedor barra">
+        <img src="logo.png" alt="Logo de Pantallas Señor del Árbol" class="logo">
+
+        <nav>
+            <a href="#empresa">Empresa</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#contactos">Contactos</a>
+            <a href="#encuesta">Encuesta</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="contenedor">
+            <h1>Pantallas Señor del Árbol</h1>
+            <p>Servicio de renta de pantallas LED para eventos.</p>
+            <a href="#contactos" class="boton">Solicitar información</a>
+        </div>
+    </section>
+
+    <section id="empresa" class="seccion">
+        <div class="contenedor">
+            <h2>Empresa</h2>
+            <p>
+                Somos una empresa dedicada al servicio de renta de pantallas LED
+                para eventos, ofreciendo soluciones visuales de calidad de acuerdo
+                con las necesidades de nuestros clientes.
+            </p>
+        </div>
+    </section>
+
+    <section id="servicios" class="seccion alterna">
+        <div class="contenedor">
+            <h2>Servicios</h2>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Renta de pantallas LED</h3>
+                    <p>Pantallas para eventos sociales, empresariales y culturales.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Instalación y montaje</h3>
+                    <p>Instalación del equipo en el lugar del evento.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Soporte técnico</h3>
+                    <p>Asistencia durante el evento.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Desmontaje</h3>
+                    <p>Retiro del equipo al finalizar el servicio.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="seccion">
+        <div class="contenedor">
+            <h2>Ubicación</h2>
+
+            <p><strong>Dirección:</strong> Cuicuno, Latacunga, Ecuador</p>
+
+            <div class="panel">
+                <h3>¿Cómo llegar?</h3>
+                <p>
+                    Presiona el botón para abrir la ruta hacia el local.
+                    Google Maps utilizará tu ubicación actual para indicarte el camino.
+                </p>
+
+                <!-- La página no obtiene ni almacena el GPS del visitante. -->
+                <a
+                    id="botonRuta"
+                    class="boton"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Cómo llegar al local
+                </a>
+
+                <div class="mapa-simple">
+                    <iframe
+                        title="Mapa de Cuicuno, Latacunga"
+                        src="https://www.google.com/maps?q=Cuicuno%2C%20Latacunga%2C%20Ecuador&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactos" class="seccion alterna">
+        <div class="contenedor">
+            <h2>Contactos</h2>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Teléfono</h3>
+                    <p id="telefonoEmpresa">0999999999</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>WhatsApp</h3>
+                    <p id="whatsappEmpresa">0999999999</p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Correo</h3>
+                    <p id="correoEmpresa">ledsenordelarbol@gmail.com</p>
+                    <p id="correoEmpresa2">jeffersonjami2018@gmail.com</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="encuesta" class="seccion">
+        <div class="contenedor">
+            <h2>Encuesta de satisfacción</h2>
+
+            <form id="formEncuesta">
+                <label for="nombre">Nombre (opcional)</label>
+                <input type="text" id="nombre" maxlength="80" placeholder="Escriba su nombre si desea">
+
+                <label for="satisfaccion">Nivel de satisfacción</label>
+                <select id="satisfaccion" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="5">Muy satisfecho</option>
+                    <option value="4">Satisfecho</option>
+                    <option value="3">Neutral</option>
+                    <option value="2">Poco satisfecho</option>
+                    <option value="1">Insatisfecho</option>
+                </select>
+
+                <label for="comentario">Comentario (opcional)</label>
+                <textarea id="comentario" maxlength="500" rows="5" placeholder="Escriba una sugerencia u opinión"></textarea>
+
+                <p class="aviso-datos">
+                    Los datos ingresados en esta demostración no se almacenan ni se envían a ningún servidor.
+                </p>
+
+                <button type="submit" class="boton">Enviar encuesta</button>
+                <div id="mensajeEncuesta" class="resultado" aria-live="polite"></div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="contenedor">
+        <p>© <span id="anio"></span> Pantallas Señor del Árbol</p>
+    </div>
+</footer>
+
+<!-- Conexión con JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
